@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeB</title>
+    <link rel="stylesheet" href="Dasboard.css">
+</head>
+<body>
+    
+<nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+
+        <div class="logo-section">TradeB</div>
+        <button id="toogleBtn">☰</button>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="Dasboard.html" class="active">Home</a></li>
+        <li><a href="../APIKeys/APIkeys.html">Api Keys</a></li>
+        <li><a href="../TradingBot/TradingBot.html">TradingBot</a></li>
+    </ul>
+    <button id="logout" class="logout-btn">Logout</button>
+</nav>
+
+<main class="main-content">
+    <header class="dashboard-header">
+
+        <h1>Dashboard</h1>
+        <h2>Welcome to TradeB Dashboard</h2>
+      </header>
+
+      <section class="stats">
+        <div class="card">
+            <h3>Total Balance</h3>
+            <p id="Balance">$200.00</p>
+        </div>
+
+        <div class="card">
+            <h3>Active Trades</h3>
+            <p id="trades">2</p>
+        </div>
+
+        <div class="card">
+            <h3>Profit/Loss</h3>
+            <p id="profit-loss">+$50.00</p>
+        </div>
+
+        <div class="card">
+            <h3>Api Keys Connected</h3>
+            <p id="keys">1</p>
+        </div>
+      </section>
+
+      <section class="activity">
+        <h2>Recent Activity</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Action</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody id="activityTable">
+                <tr>
+                    <td>Oct 25, 2025</td>
+                    <td>Buy BTC</td>
+                    <td>Completed</td>
+                    <td>$100.00</td>
+                </tr>
+                <tr>
+                    <td>Oct 24, 2025</td>
+                    <td>Sell BTC</td>
+                    <td>Completed</td>
+                    <td>$50.00</td>
+                </tr>
+                <tr>
+                    <td>Oct 23, 2025</td>
+                    <td>Deposit Funds</td>
+                    <td>Completed</td>
+                    <td>$200.00</td>
+                </tr>
+            </tbody>
+        </table>
+      </section>
+
+      <section class="chart-section">
+        <h2>Performance Overview</h2>
+        <canvas id="profilechart"></canvas>
+      </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="Dashboard.js"></script>
+</body>
+</html>

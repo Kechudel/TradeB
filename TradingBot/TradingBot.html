@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeB</title>
+    <link rel="stylesheet" href="TradingBot.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="logo">
+        <h2>TradeB</h2>
+      </div>
+      <ul>
+        <li><a href="../Dasboard/Dasboard.html">Dashboard</a></li>
+        <li><a href="../APIKeys/APIkeys.html">API Keys</a></li>
+        <li><a href="TradingBot.html" class="active">TradingBot</a></li>
+      </ul>
+       <button id="logout" class="logout-btn">Logout</button>
+</div>
+
+<div class="main-content">
+<header class="dashboard-header">
+    <h1>Dashboard</h1>
+</header>
+
+<section class="Overview">
+    <div class="card">
+        <h3>Total Balance</h3>
+        <p>$200</p>
+    </div>
+    <div class="card">
+        <h3>Profit</h3>
+        <p class="Profit">+$20</p>
+    </div>
+    <div class="card">
+        <h3>Open Trades</h3>
+        <p>2</p>
+    </div>
+    <div class="card">
+        <h3>Active Strategy</h3>
+        <p>Scalping</p>
+    </div>
+</section>
+
+<section class="trading-panel">
+    <h2>Bot Control</h2>
+    <form class="Bot-Control">
+        <label for="Strategy">Select Strategy</label>
+        <select id="Strategy" name="Strategy">
+            <option value="Scalping">Scalping</option>
+            <option value="Swing">Swing Trading</option>
+            <option value="Grid">Grid Trading</option>
+            <option value="Custom">Custom</option>
+        </select>
+
+        <label for="risk">Risk Level:</label>
+        <Select id="risk" name="risk">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </Select>
+    </form>
+</section>
+
+<section class="trades">
+    <h2>Open Trades</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Pair</th>
+                <th>Position</th>
+                <th>Entry Price</th>
+                <th>Current Price</th>
+                <th>P/L</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>BTC/USDT</td>
+                <td>Long</td>
+                <td>$200</td>
+                <td>$250</td>
+                <td class="profit">$50</td>
+                <td>Open</td>
+            </tr>
+            <tr>
+                <td>BNB/USDT</td>
+                <td>Long</td>
+                <td>$500</td>
+                <td>$550</td>
+                <td class="profit">$50</td>
+                <td>Open</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<section class="activity">
+    <h2>Recent Activity</h2>
+    <ul>
+        <li>Bot Started On Binance - Scalping Strategy</li>
+        <li>Closed Trade: BTC/USDT +$50</li>
+        <li>New Signal Detected on BNB/USDT</li>
+    </ul>
+</section>
+
+<footer class="disclaimer">
+    <p>
+        Trading involves financial risks and may result in loss of capital.
+        Always trade responsibly.
+    </p>
+</footer>
+</div>
+    
+</body>
+</html>

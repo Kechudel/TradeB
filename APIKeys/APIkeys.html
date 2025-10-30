@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TradeB</title>
+  <link rel="stylesheet" href="APIkeys.css">
+</head>
+<body>
+  <div class="container">
+    
+    <div class="sidebar">
+      <div class="logo">
+        <h2>TradeB</h2>
+      </div>
+      <ul>
+        <li><a href="../Dasboard/Dasboard.html">Dashboard</a></li>
+        <li><a href="APIKeys.html" class="active">API Keys</a></li>
+        <li><a href="../TradingBot/TradingBot.html">TradingBot</a></li>
+      </ul>
+       <button id="logout" class="logout-btn">Logout</button>
+    </div>
+
+    <main class="main-content">
+      <header>
+        <h1>Connect Exchange API</h1>
+      </header>
+
+      <section class="apikeys-section">
+        <form id="apiForm">
+          <div class="form-group">
+            <label for="exchangeSelect">Select Exchange</label>
+            <select id="exchangeSelect" required>
+              <option value="">-- Choose an Exchange --</option>
+              <option value="alpaca">Alpaca</option>
+              <option value="apex">Apex</option>
+              <option value="ascendex">Ascendex</option>
+              <option value="backpack">Backpack</option>
+              <option value="bequant">Bequant</option>
+              <option value="bigone">BigOne</option>
+              <option value="binance">Binance</option>
+              <option value="bingx">BingX</option>
+              <option value="bitget">Bitget</option>
+              <option value="bitmart">Bitmart</option>
+              <option value="bitmex">BitMEX</option>
+              <option value="bitso">Bitso</option>
+              <option value="bitstamp">Bitstamp</option>
+              <option value="bitvavo">Bitvavo</option>
+              <option value="bybit">Bybit</option>
+              <option value="coinbase">Coinbase</option>
+              <option value="coinbaseexchange">Coinbase Exchange</option>
+              <option value="coinex">CoinEx</option>
+              <option value="cryptocom">Crypto.com</option>
+              <option value="deribit">Deribit</option>
+              <option value="gate">Gate.io</option>
+              <option value="gemini">Gemini</option>
+              <option value="kraken">Kraken</option>
+              <option value="kucoin">KuCoin</option>
+              <option value="mexc">MEXC</option>
+              <option value="okx">OKX</option>
+              <option value="phemex">Phemex</option>
+              <option value="poloniex">Poloniex</option>
+              <option value="upbit">Upbit</option>
+              <option value="whitebit">Whitebit</option>
+              <option value="woo">WOO</option>
+              <option value="xt">XT</option>
+              <option value="yobit">Yobit</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="apiKey">API Key</label>
+            <input type="text" id="apiKey" placeholder="Enter your API Key" required>
+          </div>
+
+          <div class="form-group">
+            <label for="secretKey">Secret Key</label>
+            <input type="password" id="secretKey" placeholder="Enter your Secret Key" required>
+          </div>
+
+          <button type="submit">Connect</button>
+        </form>
+
+        <div id="statusMessage"></div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
