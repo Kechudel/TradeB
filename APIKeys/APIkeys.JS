@@ -32,7 +32,7 @@ function initializeLogout() {
         fetch('/api/auth/logout', {
             method: 'POST',
             headers: {
-                'Authorization': Bearer ${localStorage.getItem('accessToken')}
+                'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
             }
         }).finally(() => {
             localStorage.removeItem('accessToken');
@@ -98,7 +98,7 @@ async function connectApiKeys(formData) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': Bearer ${localStorage.getItem('accessToken')}
+                'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
             body: JSON.stringify(formData)
         });
@@ -106,7 +106,7 @@ async function connectApiKeys(formData) {
         const data = await response.json();
         
         if (response.ok) {
-            showStatusMessage(Successfully connected to ${getExchangeName(formData.exchange)}!, 'success');
+            showStatusMessage(`Successfully connected to ${getExchangeName(formData.exchange)}!`, 'success');
             
             // Reset form
             document.getElementById('apiForm').reset();
@@ -131,7 +131,7 @@ async function loadConnectedExchanges() {
     try {
         const response = await fetch('/api/exchanges', {
             headers: {
-                'Authorization': Bearer ${localStorage.getItem('accessToken')}
+                'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
             }
         });
         
@@ -188,10 +188,10 @@ async function disconnectExchange(exchangeId) {
     }
     
     try {
-        const response = await fetch(/api/exchanges/${exchangeId}, {
+        const response = await fetch(`/api/exchanges/${exchangeId}`, {
             method: 'DELETE',
             headers: {
-                'Authorization': Bearer ${localStorage.getItem('accessToken')}
+                'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
             }
         });
         
