@@ -51,9 +51,8 @@ function initializeApiForm() {
         const formData = {
             exchange: document.getElementById('exchangeSelect').value,
             apiKey: document.getElementById('apiKey').value.trim(),
-            secretKey: document.getElementById('secretKey').value,
-            // Optional: passphrase for exchanges that require it
-            passphrase: document.getElementById('passphrase') ? document.getElementById('passphrase').value : undefined
+            secretKey: document.getElementById('secretKey').value
+          
         };
         
         clearStatusMessage();
